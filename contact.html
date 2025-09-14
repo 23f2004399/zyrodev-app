@@ -66,12 +66,34 @@
                 <div class="grid lg:grid-cols-2 gap-12">
                     <div class="glass p-8 rounded-xl">
                         <h2 class="text-2xl font-bold mb-6 text-white">Send us a message</h2>
-                        <form class="space-y-6" onsubmit="handleFormSubmit(event)">
-                            <div><label class="block text-sm font-medium text-white/90 mb-2">Full Name</label><input type="text" required class="w-full px-4 py-3 glass border-0 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-white/30" placeholder="Enter your full name"></div>
-                            <div><label class="block text-sm font-medium text-white/90 mb-2">Email Address</label><input type="email" required class="w-full px-4 py-3 glass border-0 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-white/30" placeholder="Enter your email"></div>
-                            <div><label class="block text-sm font-medium text-white/90 mb-2">Subject</label><input type="text" required class="w-full px-4 py-3 glass border-0 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-white/30" placeholder="Enter subject"></div>
-                            <div><label class="block text-sm font-medium text-white/90 mb-2">How can we help you?</label><select class="w-full px-4 py-3 glass border-0 rounded-lg text-white focus:ring-2 focus:ring-white/30"><option class="bg-gray-800">Web Development</option><option class="bg-gray-800">Mobile App Development</option><option class="bg-gray-800">AI & Machine Learning</option><option class="bg-gray-800">Digital Marketing</option><option class="bg-gray-800">Video Production</option><option class="bg-gray-800">Other</option></select></div>
-                            <div><label class="block text-sm font-medium text-white/90 mb-2">Message</label><textarea rows="4" required class="w-full px-4 py-3 glass border-0 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-white/30" placeholder="Tell us about your project..."></textarea></div>
+                        <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-white/90 mb-2">Full Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 glass border-0 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-white/30" placeholder="Enter your full name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-white/90 mb-2">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 glass border-0 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-white/30" placeholder="Enter your email">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-white/90 mb-2">Subject</label>
+                                <input type="text" name="subject" required class="w-full px-4 py-3 glass border-0 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-white/30" placeholder="Enter subject">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-white/90 mb-2">How can we help you?</label>
+                                <select name="service" class="w-full px-4 py-3 glass border-0 rounded-lg text-white focus:ring-2 focus:ring-white/30">
+                                    <option class="bg-gray-800">Web Development</option>
+                                    <option class="bg-gray-800">Mobile App Development</option>
+                                    <option class="bg-gray-800">AI & Machine Learning</option>
+                                    <option class="bg-gray-800">Digital Marketing</option>
+                                    <option class="bg-gray-800">Video Production</option>
+                                    <option class="bg-gray-800">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-white/90 mb-2">Message</label>
+                                <textarea name="message" rows="4" required class="w-full px-4 py-3 glass border-0 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-white/30" placeholder="Tell us about your project..."></textarea>
+                            </div>
                             <button type="submit" class="w-full glass-button text-white py-3 px-6 rounded-lg font-semibold">Send Message</button>
                         </form>
                     </div>
